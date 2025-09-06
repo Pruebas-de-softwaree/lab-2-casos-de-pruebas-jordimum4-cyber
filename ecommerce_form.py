@@ -26,7 +26,7 @@ class OnlinePurchase:
         return isinstance(address, str) and len(address.strip()) > 5
 
     def process_purchase(self, cart, coupon, address):
-        print("Processng purcase...")
+        print("Processing purcase...")
 
 
 
@@ -53,3 +53,16 @@ class OnlinePurchase:
 
 
 if __name__ == "__main__":
+    purchase = OnlinePurchase()
+    cart = {
+        "Mouse": 2,
+        "Webcam": 3,
+        "Laptop": 4
+    }
+    coupon= "DISCOUNT10"
+    address = "PLaya Linda 333"
+
+    compra = purchase.process_purchase(cart,coupon,address)
+    print(compra)
+
+    print("END")
